@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabricon Clothes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav id="navbar">
+            <div id="brand">
+                <!-- <img src="img/fabricon.png" alt=""> -->
+                <h1>MsWear</h1>
+            </div>
+            <div id="hamburger" class="hamburger">
+                <i class="ri-menu-line"></i> <!-- Hamburger Icon -->
+            </div>
+            <div id="nav-links" class="nav-links">
+                <a href="#">Home</a>
+                <a href="About.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="https://www.instagram.com/mshayt254/" target="_blank">Shop</a>
+                <!-- <a href="#">Contact</a> -->
+            </div>
+            
+            <div id="nav-buttons">
+                <button><img src="img/pngwing.com (23).png" alt=""></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2><span id="auto-type"></span></h2>
+        <p>Discover our exclusive collection of Men,s Fashion Apparel</p>
+        <button class="shop"><a href="https://www.instagram.com/mshayt254/" target="_blank">Shop Now</a></button>
+    </section>
+
+    <!-- Product Section -->
+    <section id="products">
+        <div class="product-card" id="design">
+            <h3>Dress Collection</h3>
+        </div>
+        <div class="product-card" id="tees">
+            <h3 id="mid-set">Tees Collection</h3>
+        </div>
+        <div class="product-card" id="color">
+            <h3>Jeans Collection</h3>
+        </div>
+        <div class="product-card" id="chinos">
+            <h3>Chinos Collection</h3>
+        </div>
+    </section>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="img/i1.jpg" alt="Image 1">
+                <div class="hover-text"><h2>Quality Printing</h2></div>
+            </div>
+            <div class="slide">
+                <img src="img/i2.jpg" alt="Image 2">
+                <div class="hover-text"><h2>Classy Designs</h2></div>
+            </div>
+            <!-- <div class="slide">
+                <img src="img/i3.jpg" alt="Image 3">
+                <div class="hover-text"><h2>Free Delivery</h2></div>
+            </div> -->
+            <div class="slide">
+                <img src="img/i4.jpg" alt="Image 4">
+                <div class="hover-text"><h2>Fashion Wear</h2></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Call to Action Section -->
+    <!-- <section id="cta">
+        <h2>Create Your Own Custom Design!</h2>
+        <button class="shop"><a href="https://www.canva.com/" target="_blank">Get Started</a></button>
+    </section> -->
+
+    <!-- Footer -->
+    <footer>
+        <div id="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61566761522474" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.instagram.com/mshayt254/" target="_blank"><i class="ri-instagram-fill"></i></a>
+        </div>
+        <p>&copy; 2024 MsWear. All Rights Reserved.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+    var typed = new Typed('#auto-type', {
+        strings: ["Elevate your Wear, with MsWear"],
+        typeSpeed: 80,
+        backSpeed: 70,
+        loop: true
+    })
+</script>
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    
+    function changeSlide() {
+      currentIndex++;
+      if (currentIndex >= slideCount) {
+        currentIndex = 0;
+      }
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    // Auto change slides every 3 seconds
+    setInterval(changeSlide, 3000);
+    </script>
+    
+</html>
